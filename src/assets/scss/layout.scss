@@ -1,0 +1,131 @@
+.main-header {
+  height: 2.7rem;
+  background-color: $header-color;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  div {
+    display: flex;
+    align-self: center;
+    line-height: 1.4rem;
+    p {
+      padding-left: 1rem;
+      font-size: 0.8rem;
+      line-height: 1rem;
+    }
+  }
+  button {
+    background-color: $dropdown-color;
+    height: 2.7rem;
+    width: 7%;
+    color: inherit;
+    border-radius: 0;
+  }
+  i {
+    font-size: 1.2rem;
+  }
+  .iconUser {
+    font-size: 1.7rem;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    border: none;
+    right: 0 !important;
+    li {
+      text-align: center;
+      background-color: $nav-color;
+      margin: 0.1rem 0;
+      padding: 0.3rem 0.35rem;
+    }
+  }
+  .dropdown-item {
+    color: white;
+  }
+}
+.main-body {
+  display: flex;
+  flex-direction: row;
+  .main-content {
+    width: calc(100%-8rem);
+  }
+  .main-nav {
+    font-size: 1rem;
+    height: calc(100vh - 2.7rem);
+    width: 8rem;
+    color: white;
+    background-color: #666666;
+    position: relative;
+    transition: all 0.7s;
+    .collapsebtn {
+      height: 1.9rem;
+      width: 1.9rem;
+      position: absolute;
+      bottom: 3%;
+      right: -0.8rem;
+      border-radius: 50%;
+      border: 1px solid $nav-color;
+      background-color: white;
+      color: $nav-color;
+      &:hover {
+        color: $nav-color !important;
+      }
+    }
+    .main-nav_item {
+      padding: 0.55rem 0 0.55rem 1.7rem;
+      text-align: left;
+      position: relative;
+      border-bottom: 0.1px solid rgb(139, 138, 138);
+    }
+    .homeNav {
+      @extend .main-nav_item;
+      height: 6em;
+      display: flex;
+      font-weight: 700;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 2rem;
+      i {
+        font-size: 1.8rem;
+      }
+    }
+    .request {
+      @extend .main-nav_item;
+      font-size: 0.8rem;
+      font-weight: 700;
+      i {
+        font-size: 1rem;
+        margin: 0 0.2rem;
+        position: relative;
+        top: 0.12rem;
+      }
+    }
+    .main-nav_function {
+      @extend .main-nav_item;
+      font-size: 0.65rem;
+    }
+  }
+}
+.main-border {
+  .main-nav_function,
+  .homeNav,
+  .request {
+    border: none !important;
+  }
+}
+.collapseNav .main-nav {
+  margin-left: -6.7rem;
+  background-color: #666666;
+}
+// .collapseNav .main-content {
+//   max-width: 96.5%;
+// }
+.active::before {
+  content: "";
+  height: 100%;
+  width: 0.9rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(197, 83, 83);
+}

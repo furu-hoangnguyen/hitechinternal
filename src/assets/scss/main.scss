@@ -1,0 +1,29 @@
+$header-color: #44a5cc;
+$nav-color: #666666;
+$dropdown-color: #3d94b7;
+body {
+  margin: 0;
+  font-size: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+  border: none;
+  padding: 0;
+  outline: none;
+}
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+button:hover {
+  color: inherit !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:active {
+  color: white;
+  text-decoration: none;
+  background-color: $nav-color;
+}
+@import "./layout.scss";
