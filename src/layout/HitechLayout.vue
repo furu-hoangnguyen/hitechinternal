@@ -20,7 +20,11 @@
         </b-dropdown>
       </b-col>
     </b-row>
-    <div class="main-body" :class="{ collapseNav: hascollpase }">
+    <div
+      class="main-body"
+      :class="{ collapseNav: hascollpase }"
+      v-if="sreenWidth > 1023"
+    >
       <div class="main-nav" :class="{ 'main-border': activeNum == 1 }">
         <div
           class="homeNav"
@@ -94,8 +98,16 @@ export default {
   data() {
     return {
       hascollpase: false,
-      activeNum: 0,
+      activeNum: 1,
     };
+  },
+  computed: {
+    sreenWidth() {
+      return window.innerWidth;
+    },
+  },
+  mounted() {
+    console.log(this.sreenWidth);
   },
 };
 </script>
