@@ -1,0 +1,45 @@
+.wapper_login {
+  padding: 2.5rem 3.75rem;
+  background-image: url('../assets/images/login/logo.png');
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 2.7rem);
+  background-origin: content-box;
+  background-size: 130px 22px;
+
+  .title_login {
+    font-size: 20px;
+  }
+
+  .form-group {
+    label {
+      font-size: 20px;
+      margin-bottom: 0rem;
+    }
+
+    input {
+      width: 360px;
+      background-color: #0000001A;
+      border: 2px solid #00000066;
+      font-size: 16px;
+    }
+
+    .custom-control {
+      label {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .btn_submit_login {
+    padding: 8px 28px;
+    font-size: 16px;
+    background-color: #00000066;
+    color: #fff;
+    border-width: 0rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+}

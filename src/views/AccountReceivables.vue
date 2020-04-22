@@ -1,5 +1,5 @@
 <template>
-  <HitechLayout>
+  <div>
     <div class="createAcount-header">
       <div class="createAcount-header_account">
         <div>販売未収金申請</div>
@@ -273,14 +273,12 @@
         </b-row>
       </section>
     </b-container>
-  </HitechLayout>
+  </div>
 </template>
 
 <script>
-import HitechLayout from "../layout/HitechLayout";
 export default {
-  name: "CreatePage",
-  components: { HitechLayout },
+  name: " AccountReceivables",
   data() {
     return {};
   },
