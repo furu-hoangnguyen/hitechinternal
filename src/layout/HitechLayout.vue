@@ -20,12 +20,12 @@
         </b-dropdown>
       </b-col>
     </b-row>
-    <div
-      class="main-body"
-      :class="{ collapseNav: hascollpase }"
-      v-if="sreenWidth > 1023"
-    >
-      <div class="main-nav" :class="{ 'main-border': activeNum == 1 }">
+    <div class="main-body" :class="{ collapseNav: hascollpase }">
+      <div
+        class="main-nav"
+        v-if="sreenWidth > 1024"
+        :class="{ 'main-border': activeNum == 1 }"
+      >
         <div
           class="homeNav"
           :class="{ active: activeNum == 1 }"

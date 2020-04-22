@@ -1,0 +1,185 @@
+.createAcount-header {
+  width: 100%;
+  height: 2.5rem;
+  background-color: rgba(197, 194, 194, 0.397);
+  .createAcount-header_account {
+    width: 50%;
+    height: 100%;
+    float: left;
+    div {
+      height: 100%;
+      float: left;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      &:first-child {
+        font-weight: 700;
+        font-size: 0.7rem;
+        margin: 0 1rem;
+      }
+    }
+  }
+  .createAcount-header_status {
+    width: 20%;
+    height: 100%;
+    float: right;
+    .createAcount-header_status_item {
+      float: right;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      font-size: 0.5rem;
+      text-align: center;
+      line-height: 3rem;
+      color: $header-color;
+      font-weight: 900;
+      border: 1.5px solid $header-color;
+      background-color: white;
+      margin: 0.3rem 0.5rem 0 0;
+    }
+  }
+}
+.label_input_header {
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  i {
+    font-size: 1.2rem;
+  }
+}
+.btn_grey {
+  background-color: grey;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  color: white;
+  padding: 0;
+  font-size: 0.6rem;
+}
+.label_input {
+  background-color: grey;
+  margin: 0;
+  font-size: 0.6rem;
+  display: flex;
+  flex-direction: row;
+  & > div {
+    padding: 0;
+    width: calc(100% - 11vw);
+    height: 100%;
+  }
+  label {
+    width: 11vw;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+    display: flex;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+  }
+  input,
+  select {
+    width: 100%;
+    float: right;
+    font-size: 0.6rem;
+    font-weight: 700;
+    border: 1px solid grey;
+    border-radius: 0;
+    padding: 0 0.4rem;
+    height: 1.3rem;
+    &:focus {
+      border-color: grey;
+      box-shadow: none;
+    }
+  }
+}
+.label_textarea {
+  background: none;
+  position: relative;
+  justify-content: flex-end;
+  border: 1px solid grey;
+  label {
+    color: grey;
+    background-color: grey;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  & > div {
+    float: right;
+    textarea {
+      resize: none;
+      border: none;
+      &:focus {
+        border: none;
+      }
+    }
+  }
+}
+.attachFile {
+  .attachFile_body {
+    border: 1px dashed grey;
+    overflow: hidden;
+    color: white;
+    label {
+      background-color: grey;
+      color: white;
+      padding: 0.2rem 1rem;
+    }
+    button {
+      background-color: $header-color;
+      color: white;
+      border: none;
+      font-size: 0.7rem;
+      margin: 0.5rem 0;
+      width: 70%;
+      border-radius: 0;
+    }
+  }
+  .attachFile_filename {
+    font-size: 1rem;
+    i {
+      position: relative;
+      top: 0.2rem;
+      color: $header-color;
+    }
+    .fa-minus-circle {
+      color: grey;
+      cursor: pointer;
+    }
+    a {
+      color: $header-color;
+      font-size: 0.8rem;
+      text-decoration: underline;
+    }
+  }
+}
+.table_payment {
+  font-size: 0.6rem;
+  border-spacing: 0.1rem;
+  border-collapse: separate;
+  th {
+    border-spacing: 1rem;
+    padding: 0.1rem 1rem;
+    margin: 0.3rem;
+    &:not(:nth-child(1)) {
+      background-color: grey;
+      border: 1px solid grey;
+      color: white;
+    }
+  }
+  tr td {
+    padding: 0.1rem 1rem;
+    border: 1px solid grey;
+    text-align: right;
+    &:nth-child(1) {
+      border: none;
+      text-align: center;
+      background-color: grey;
+      border: 1px solid grey;
+      color: white;
+    }
+  }
+}

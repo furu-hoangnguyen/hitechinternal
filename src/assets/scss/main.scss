@@ -11,6 +11,7 @@ button {
   border: none;
   padding: 0;
   outline: none;
+  border-radius: 0;
 }
 button:focus {
   outline: none !important;
@@ -19,7 +20,10 @@ button:focus {
 button:hover {
   color: inherit !important;
 }
-
+.form-control:focus {
+  border-color: grey;
+  box-shadow: none;
+}
 .dropdown-item:hover,
 .dropdown-item:active {
   color: white;
@@ -27,3 +31,4 @@ button:hover {
   background-color: $nav-color;
 }
 @import "./layout.scss";
+@import "./createAcount.scss";
