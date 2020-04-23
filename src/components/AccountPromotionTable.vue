@@ -46,7 +46,7 @@
 
 <script>
 export default {
-  name: "AccountReceivablesConditionTable",
+  name: "AccountPromotionTable",
   data() {
     return {
       fields: [
@@ -55,24 +55,16 @@ export default {
         "店舗グループ名",
         "担当者名",
         "部門名",
-        "項目名",
+        "販促費目",
+        "入力タイプ",
+        "区分",
+        "ブランド区分",
+        "カテゴリ",
         "",
         "品目コード",
         "品目略称",
-        "容量",
-        "入数",
-        "生産者価格(円)",
-        "口銭(%)",
-        "c/s引条件(円)",
-        "伝票NET(円)",
-        "未収単価(円)",
-        "最終手取単価(円)",
-        "標準原価(営業)(円)",
-        "販売本数",
+        "荷姿",
         "未収金額(円)",
-        "売上金額(円",
-        "最終限界利益額(円)",
-        "最終限界利益率(%)",
       ],
       items: [
         {
@@ -104,6 +96,30 @@ export default {
           type: "select",
           value: "",
           options: [{ value: "a", text: "This is First option" }],
+          class: "size_lg",
+        },
+        {
+          type: "select",
+          value: "",
+          options: [{ value: "a", text: "This is First option" }],
+          class: "size_xl",
+        },
+        {
+          type: "select",
+          value: "",
+          options: [{ value: "a", text: "This is First option" }],
+          class: "size_md",
+        },
+        {
+          type: "select",
+          value: "",
+          options: [{ value: "a", text: "This is First option" }],
+          class: "size_lg",
+        },
+        {
+          type: "select",
+          value: "",
+          options: [{ value: "a", text: "This is First option" }],
           class: "size_xl",
         },
         {
@@ -116,6 +132,7 @@ export default {
         {
           type: "text",
           value: "",
+          class: "size_sm",
         },
         {
           type: "text",
@@ -127,78 +144,12 @@ export default {
           type: "text",
           value: "",
           readonly: true,
-          class: "size_md",
-        },
-        {
-          type: "number",
-          value: "",
-        },
-        {
-          type: "number",
-          value: "",
           class: "size_lg",
         },
         {
-          type: "number",
-          value: "",
-          class: "size_sm",
-        },
-        {
-          type: "number",
-          value: "",
-          class: "size_lg",
-        },
-        {
-          type: "number",
-          value: "",
-          readonly: true,
-          class: "size_lg",
-        },
-        {
-          type: "number",
+          type: "text",
           value: "",
           class: "size_md",
-        },
-        {
-          type: "number",
-          value: "",
-          readonly: true,
-          class: "size_lg",
-        },
-        {
-          type: "number",
-          value: "",
-          class: "size_md",
-        },
-        {
-          type: "number",
-          value: "",
-          readonly: true,
-          class: "size_lg",
-        },
-        {
-          type: "number",
-          value: "",
-          readonly: true,
-          class: "size_lg",
-        },
-        {
-          type: "number",
-          value: "",
-          readonly: true,
-          class: "size_lg",
-        },
-        {
-          type: "number",
-          value: "",
-          readonly: true,
-          class: "size_lg",
-        },
-        {
-          type: "number",
-          value: "",
-          readonly: true,
-          class: "size_lg",
         },
       ],
       list: [],

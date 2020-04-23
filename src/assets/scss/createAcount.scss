@@ -184,6 +184,54 @@
   }
 }
 .account_receivables_condition {
+  .account_receivables_condition_table {
+    overflow-x: hidden;
+    tr th {
+      padding: 0.1rem;
+      text-align: center;
+      font-weight: 500;
+      color: white;
+      background-color: gray;
+      vertical-align: middle;
+    }
+    tr td {
+      width: auto;
+      min-width: 2.5rem;
+      padding: 0.2rem 0.2rem;
+      input {
+        outline: none;
+        &:read-only {
+          border: none;
+          background-color: $readonly-color;
+        }
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 0 0.1rem;
+        font-size: inherit;
+        border-radius: 0;
+        height: 1rem;
+      }
+      &:nth-child(1) {
+        input {
+          background: none;
+        }
+      }
+    }
+
+    i {
+      font-size: 1rem;
+    }
+    .searchproduct {
+      background-color: grey;
+      color: white;
+      padding: 0.1rem;
+      &:hover {
+        color: white !important;
+      }
+    }
+  }
   .account_receivables_condition_action {
     i {
       font-size: 1.2rem;
@@ -192,4 +240,16 @@
       cursor: pointer;
     }
   }
+}
+.size_sm {
+  width: 2.9rem !important;
+}
+.size_md {
+  width: 4rem !important;
+}
+.size_lg {
+  width: 5rem !important;
+}
+.size_xl {
+  width: 8rem !important;
 }

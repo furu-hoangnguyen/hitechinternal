@@ -1,5 +1,5 @@
 <template>
-  <HitechLayout>
+  <section>
     <div class="createAcount-header">
       <div class="createAcount-header_account">
         <div>販売未収金申請</div>
@@ -264,37 +264,37 @@
         <b-row class="label_input_header p-1 mt-3"
           >販売未収条件 <i class="fas fa-angle-down"></i
         ></b-row>
-
-        <b-row class="px-4 py-1 mt-3 account_receivables_condition">
-          <b-col md="10" class="pl-0 account_receivables_condition_table">
-            <b-table
-              :items="account_receivables_condition_items"
-              :fields="account_receivables_condition_fields"
-            >
-              <template v-slot:table-caption>This is a table caption.</template>
-            </b-table>
-          </b-col>
-          <b-col md="2" class="pl-0 account_receivables_condition_action">
-            <i class="fas fa-plus-circle"></i>
-            <i class="fas fa-copy"></i>
-            <i class="fas fa-minus-circle"></i>
-          </b-col>
-        </b-row>
+        <AccountReceivablesConditionTable />
+        <b-row class="label_input_header p-1 mt-3"
+          >税8%販促費 <i class="fas fa-angle-down"></i
+        ></b-row>
+        <AccountPromotionTable />
+        <b-row class="label_input_header p-1 mt-3"
+          >税10%販促費 <i class="fas fa-angle-down"></i
+        ></b-row>
+        <AccountPromotionTable />
+        <b-row class="label_input_header p-1 mt-3"
+          >物流費 <i class="fas fa-angle-down"></i
+        ></b-row>
+        <AccountPromotionTable />
       </section>
     </b-container>
-  </HitechLayout>
+  </section>
 </template>
 
 <script>
-import HitechLayout from "../layout/HitechLayout";
+// import SSKFLayout from "@/layout/SSKFLayout";
 export default {
-  name: "CreatePage",
-  components: { HitechLayout },
+  name: "RequestAccountPage",
+  // components: {
+  //   SSKFLayout,
+  // },
   data() {
     return {
       account_receivables_condition_items: [],
     };
   },
+  created() {},
 };
 </script>
 

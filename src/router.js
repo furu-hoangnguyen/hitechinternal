@@ -1,13 +1,17 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import CreatePage from "./views/CreatePage.vue";
+import RequestAccountPage from "@/views/RequestAccountPage.vue";
 Vue.use(VueRouter);
 
 const router = new VueRouter({
   mode: "history",
   routes: [
-    { path: "/", name: "/", redirect: "/createpage" },
-    { path: "/createpage", name: "/createpage", component: CreatePage },
+    { path: "/", name: "/", redirect: "/RequestAccountPage" },
+    {
+      path: "/RequestAccountPage",
+      name: "/RequestAccountPage",
+      component: RequestAccountPage,
+    },
   ],
 });
 

@@ -23,7 +23,7 @@
     <div class="main-body" :class="{ collapseNav: hascollpase }">
       <div
         class="main-nav"
-        v-if="sreenWidth > 1024"
+        v-if="!isTabletDevice"
         :class="{ 'main-border': activeNum == 1 }"
       >
         <div
@@ -93,8 +93,9 @@
 </template>
 
 <script>
+import isTablet from "@/helper/isTabletDevice";
 export default {
-  name: "HitechLayout",
+  name: "LayoutSskf",
   data() {
     return {
       hascollpase: false,
@@ -102,12 +103,12 @@ export default {
     };
   },
   computed: {
-    sreenWidth() {
-      return window.innerWidth;
+    isTabletDevice() {
+      return isTablet();
     },
   },
-  mounted() {
-    console.log(this.sreenWidth);
+  created() {
+    console.log(isTablet());
   },
 };
 </script>

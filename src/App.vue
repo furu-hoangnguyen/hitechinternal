@@ -1,5 +1,9 @@
 <template>
-  <router-view></router-view>
+  <section>
+    <LayoutSskf>
+      <router-view></router-view>
+    </LayoutSskf>
+  </section>
 </template>
 
 <script>
