@@ -49,6 +49,12 @@
   width: 100%;
   .main-content {
     width: calc(100% - 8rem);
+    height: calc(100vh - 2.7rem);
+    overflow-y: scroll;
+    transition: all 0.7s;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   .main-nav {
     font-size: 1rem;
@@ -118,9 +124,9 @@
   margin-left: -6.7rem;
   background-color: #666666;
 }
-// .collapseNav .main-content {
-//   max-width: 96.5%;
-// }
+.collapseNav .main-content {
+  width: calc(100% - 1.3rem);
+}
 .active::before {
   content: "";
   height: 100%;

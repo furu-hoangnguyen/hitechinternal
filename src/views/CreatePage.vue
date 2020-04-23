@@ -224,7 +224,7 @@
         </b-row>
 
         <b-row class="px-4 py-1 mt-3">
-          <b-col md="6" class="pl-0">
+          <b-col md="10" class="pl-0">
             <table class="table_payment">
               <tr>
                 <th>支払金額</th>
@@ -267,8 +267,17 @@
 
         <b-row class="px-4 py-1 mt-3 account_receivables_condition">
           <b-col md="10" class="pl-0 account_receivables_condition_table">
+            <b-table
+              :items="account_receivables_condition_items"
+              :fields="account_receivables_condition_fields"
+            >
+              <template v-slot:table-caption>This is a table caption.</template>
+            </b-table>
           </b-col>
           <b-col md="2" class="pl-0 account_receivables_condition_action">
+            <i class="fas fa-plus-circle"></i>
+            <i class="fas fa-copy"></i>
+            <i class="fas fa-minus-circle"></i>
           </b-col>
         </b-row>
       </section>
@@ -282,7 +291,9 @@ export default {
   name: "CreatePage",
   components: { HitechLayout },
   data() {
-    return {};
+    return {
+      account_receivables_condition_items: [],
+    };
   },
 };
 </script>
