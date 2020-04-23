@@ -4,7 +4,7 @@
 
     <b-container fluid class="wapper_login">
       <div class="title_login">ログイン画面</div>
-
+      <div v-if="!submitted">
       <b-row class="justify-content-center">
         <b-form>
           <b-form-group
@@ -15,6 +15,7 @@
               id="shainCd"
               type="text"
               placeholder="ID"
+              v-model="user.id"
             ></b-form-input>
           </b-form-group>
 
@@ -26,6 +27,7 @@
               id="password"
               type="password"
               placeholder="Password"
+              v-model="user.password"
             ></b-form-input>
           </b-form-group>
 
@@ -35,21 +37,44 @@
             </b-form-checkbox-group>
           </b-form-group>
 
-          <b-button type="submit" class="btn_submit_login">ログイン</b-button>
+          <b-button @click="authentication" class="btn_submit_login">ログイン</b-button>
         </b-form>
       </b-row>
-
+      </div>
     </b-container>
   </b-container>
 </template>
 
 <script>
 import HeaderComponent from '@/components/header/HeaderComponent';
-
+import LoginService from "../services/LoginService";
 export default {
   name: "Login",
   data() {
-    return {}
+    return {
+      user: {
+        id: null,
+        password: ""
+      },
+      submitted: false
+    };
+  },
+  methods: {
+    authentication() {
+      var data = {
+        username: this.user.id,
+        password: this.user.password
+      };
+
+      LoginService.login(data)
+              .then(response => {
+                console.log(response.data);
+                this.$router.push('/home')
+              })
+              .catch(e => {
+                console.log(e);
+              });
+    }
   },
   components: {
     HeaderComponent
@@ -58,7 +83,5 @@ export default {
 </script>
 
 <style lang="scss">
-
-@import "@/assets/scss/login.scss";
-
+  @import "./src/assets/scss/login";
 </style>
