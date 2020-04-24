@@ -17,7 +17,8 @@
     <b-container fluid class="bv-example-row">
       <section>
         <b-row class="label_input_header p-1"
-          >販促金管理項目 <i class="fas fa-angle-down"></i
+          ><b-col cols="auto" class="pl-0"
+            >販促金管理項目 <i class="fas fa-angle-down"></i></b-col
         ></b-row>
         <b-row class="px-4 py-1">
           <b-col md="5" lg="4" class="pl-0">
@@ -52,7 +53,7 @@
               label-for="use_other_input"
               class="label_input"
             >
-              <b-form-input type="text" id="use_other_input"></b-form-input>
+              <b-form-select id="use_other_input"></b-form-select>
             </b-form-group>
           </b-col>
           <b-col md="5" lg="5">
@@ -62,7 +63,7 @@
               label-for="internal_commission"
               class="label_input"
             >
-              <b-form-input type="text" id="internal_commission"></b-form-input>
+              <b-form-select id="internal_commission"></b-form-select>
             </b-form-group>
           </b-col>
         </b-row>
@@ -94,20 +95,20 @@
             <b-form-group
               id="fieldset-horizontal"
               label="部門名"
-              label-for="billing_amount"
+              label-for="field1"
               class="label_input"
             >
-              <b-form-select></b-form-select>
+              <b-form-input type="date" id="field1"></b-form-input>
             </b-form-group>
           </b-col>
           <b-col md="5" lg="5">
             <b-form-group
               id="fieldset-horizontal"
               label="申請者名"
-              label-for="billing_date"
+              label-for="field2"
               class="label_input"
             >
-              <b-form-select></b-form-select>
+              <b-form-input type="date" id="field2"></b-form-input>
             </b-form-group>
           </b-col>
         </b-row>
@@ -155,7 +156,8 @@
       </section>
       <section>
         <b-row class="label_input_header p-1 mt-3"
-          >販促金管理項目 <i class="fas fa-angle-down"></i
+          ><b-col cols="auto" class="pl-0"
+            >販促金管理項目 <i class="fas fa-angle-down"></i></b-col
         ></b-row>
         <b-row class="px-4 py-1 mt-3">
           <b-col md="5" lg="4" class="pl-0">
@@ -262,19 +264,23 @@
       </section>
       <section>
         <b-row class="label_input_header p-1 mt-3"
-          >販売未収条件 <i class="fas fa-angle-down"></i
+          ><b-col cols="auto" class="pl-0"
+            >販売未収条件 <i class="fas fa-angle-down"></i></b-col
         ></b-row>
         <AccountReceivablesConditionTable />
         <b-row class="label_input_header p-1 mt-3"
-          >税8%販促費 <i class="fas fa-angle-down"></i
+          ><b-col cols="auto" class="pl-0"
+            >税8%販促費 <i class="fas fa-angle-down"></i></b-col
         ></b-row>
         <AccountPromotionTable />
         <b-row class="label_input_header p-1 mt-3"
-          >税10%販促費 <i class="fas fa-angle-down"></i
+          ><b-col cols="auto" class="pl-0"
+            >税10%販促費 <i class="fas fa-angle-down"></i></b-col
         ></b-row>
         <AccountPromotionTable />
         <b-row class="label_input_header p-1 mt-3"
-          >物流費 <i class="fas fa-angle-down"></i
+          ><b-col cols="auto" class="pl-0"
+            >物流費 <i class="fas fa-angle-down"></i></b-col
         ></b-row>
         <AccountPromotionTable />
       </section>
@@ -283,7 +289,6 @@
 </template>
 
 <script>
-// import SSKFLayout from "@/layout/SSKFLayout";
 export default {
   name: "RequestAccountPage",
   // components: {

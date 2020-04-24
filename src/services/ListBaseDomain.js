@@ -1,4 +1,4 @@
-import BASE_INTANSE from "./BaseIntanse";
+import BASE_INTANSE from "@/api";
 
 const DOMAIN = {
   LOGIN_USER: async function(params) {

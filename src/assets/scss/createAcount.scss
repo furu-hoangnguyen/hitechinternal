@@ -42,7 +42,10 @@
 .label_input_header {
   font-weight: 700;
   font-size: 0.9rem;
-  cursor: pointer;
+  div {
+    cursor: pointer;
+  }
+
   i {
     font-size: 1.2rem;
   }
