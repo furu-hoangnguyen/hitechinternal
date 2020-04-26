@@ -2,14 +2,27 @@ $header-color: #44a5cc;
 $nav-color: #666666;
 $dropdown-color: #3d94b7;
 $readonly-color: lightgrey;
+$color-red: #df6561;
 body {
   margin: 0;
   font-size: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   min-width: 100vw;
   min-height: 100vh;
+  overflow: auto;
 }
 
+.color_red {
+  color: $color-red !important;
+}
+.color_blue {
+  color: $header-color !important;
+}
+.color_grey {
+  color: grey !important;
+}
+a,
+.btn,
 button {
   border: none;
   padding: 0;
@@ -20,8 +33,9 @@ button:focus {
   outline: none !important;
   box-shadow: none !important;
 }
-button:hover {
-  color: inherit !important;
+button:hover,
+btn:hover {
+  color: none !important;
 }
 .form-control:focus,
 .custom-select:focus {

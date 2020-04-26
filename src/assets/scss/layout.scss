@@ -8,10 +8,11 @@
     display: flex;
     align-self: center;
     line-height: 1.4rem;
+    position: relative;
     p {
-      padding-left: 1rem;
       font-size: 0.8rem;
       line-height: 1rem;
+      padding-left: 0.2rem;
     }
   }
   button {
@@ -20,9 +21,16 @@
     width: 7%;
     color: inherit;
     border-radius: 0;
+    &:hover {
+      color: white;
+    }
   }
   i {
     font-size: 1.2rem;
+    &:first-child {
+      padding-left: 0.7rem;
+      font-size: 1.7rem;
+    }
   }
   .iconUser {
     font-size: 1.7rem;
@@ -56,6 +64,7 @@
     &::-webkit-scrollbar {
       display: none;
     }
+    position: relative;
   }
   .main-nav {
     font-size: 1rem;
@@ -112,6 +121,9 @@
       @extend .main-nav_item;
       font-size: 0.65rem;
     }
+    div {
+      cursor: pointer;
+    }
   }
 }
 .main-border {
@@ -137,7 +149,22 @@
   left: 0;
   background-color: rgb(197, 83, 83);
 }
-
+.active {
+  font-size: 1.1rem !important;
+}
+.active_function {
+  @extend .active::before;
+  width: 0.4rem;
+}
+.active_tablet::before {
+  content: "";
+  height: 0.2rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(197, 83, 83);
+}
 @media only screen and (max-width: 1024px) {
   .main-body {
     .main-content {

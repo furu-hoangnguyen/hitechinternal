@@ -186,62 +186,66 @@
     }
   }
 }
-.account_receivables_condition {
-  .account_receivables_condition_table {
-    overflow-x: hidden;
-    tr th {
-      padding: 0.1rem;
-      text-align: center;
-      font-weight: 500;
-      color: white;
-      background-color: gray;
-      vertical-align: middle;
-    }
-    tr td {
-      width: auto;
-      min-width: 2.5rem;
-      padding: 0.2rem 0.2rem;
-      input {
-        outline: none;
-        &:read-only {
-          border: none;
-          background-color: $readonly-color;
-        }
-      }
-      input,
-      select {
-        width: 100%;
-        padding: 0 0.1rem;
-        font-size: inherit;
-        border-radius: 0;
-        height: 1rem;
-      }
-      &:nth-child(1) {
-        input {
-          background: none;
-        }
-      }
-    }
 
-    i {
-      font-size: 1rem;
+.account_receivables_condition_table {
+  overflow-x: hidden;
+  tr th {
+    padding: 0.1rem;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    background-color: gray;
+    vertical-align: middle;
+  }
+  tr td {
+    width: auto;
+    min-width: 2.5rem;
+    padding: 0.2rem 0.2rem;
+    input {
+      outline: none;
+      &:read-only {
+        border: none;
+        background-color: $readonly-color;
+      }
     }
-    .searchproduct {
-      background-color: grey;
-      color: white;
-      padding: 0.1rem;
-      &:hover {
-        color: white !important;
+    input,
+    select {
+      width: 100%;
+      padding: 0 0.1rem;
+      font-size: inherit;
+      border-radius: 0;
+      height: 1rem;
+      &:read-only {
+        background-color: $readonly-color;
+      }
+    }
+    &:nth-child(1) {
+      input {
+        background: none;
       }
     }
   }
-  .account_receivables_condition_action {
-    i {
-      font-size: 1.2rem;
-      margin: 0 0.5rem;
-      color: grey;
-      cursor: pointer;
+
+  i {
+    font-size: 1rem;
+    color: grey;
+  }
+  .searchproduct {
+    background-color: grey;
+    color: white;
+    padding: 0.1rem;
+    &:hover {
+      color: white !important;
     }
+  }
+}
+
+.account_receivables_condition_action {
+  i {
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+    color: grey;
+    cursor: pointer;
   }
 }
 .size_sm {
@@ -255,4 +259,63 @@
 }
 .size_xl {
   width: 8rem !important;
+}
+
+.commentSidebar {
+  font-size: 0.7rem;
+  .b-sidebar {
+    top: auto;
+    bottom: 0;
+    width: 14rem;
+    height: calc(100vh - 5.2rem) !important;
+    background-color: grey !important;
+    color: white !important;
+    .commentSidebar-header {
+      border-bottom: 1px solid white;
+      a {
+        padding: 0.2rem 0.7rem;
+        margin: 0.1rem 0;
+        color: $header-color;
+        font-weight: 700;
+        margin: 0;
+        background-color: white;
+      }
+      i {
+        padding: 0.26rem;
+        height: 1.2rem;
+        width: 1.2rem;
+        background-color: white;
+        color: grey;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+    .commentSidebar-cotent {
+      textarea {
+        font-size: 0.7rem;
+        resize: none;
+      }
+      .custom-control {
+        input[type="checkbox"] {
+          cursor: pointer;
+        }
+        label {
+          line-height: 1.5rem;
+        }
+      }
+    }
+    .commentSidebar_handle {
+      button {
+        font-size: 0.6rem;
+        padding: 0.4rem;
+        height: 3rem;
+        background-color: $header-color;
+      }
+      border-bottom: 1px solid white;
+    }
+    .commentSidebar_user {
+      height: 50%;
+      overflow-y: scroll;
+    }
+  }
 }

@@ -1,12 +1,18 @@
 <template>
   <b-container fluid class="bv-example-row p-0 main">
     <b-row no-gutters class="main-header" align-h="between">
-      <b-col cols="auto" align-v="center">
-        <p class="my-0">
-          未収金 <br />
-          処理システム
-        </p>
-      </b-col>
+      <b-row cols="auto" align-v="center">
+        <b-col cols="auto"
+          ><i class="fas fa-home"></i>
+          <p class="my-0">
+            未収金 <br />
+            処理システム
+          </p></b-col
+        >
+        <b-col class="main-nav_function" cols="auto">
+          承認する <span class="main-nav_count">5</span>
+        </b-col>
+      </b-row>
       <b-col cols="auto" align-v="center" class="mr-5">
         <b-dropdown no-caret variant="none">
           <template v-slot:button-content>
@@ -53,28 +59,28 @@
           :class="{ active: activeNum == 4 }"
           @click="activeNum = 4"
         >
-          作成する
+          作成する <span class="main-nav_count">2</span>
         </div>
         <div
           class="main-nav_function"
           :class="{ active: activeNum == 5 }"
           @click="activeNum = 5"
         >
-          確認する
+          確認する <span class="main-nav_count">3</span>
         </div>
         <div
           class="main-nav_function"
           :class="{ active: activeNum == 6 }"
           @click="activeNum = 6"
         >
-          申請する
+          申請する <span class="main-nav_count">4</span>
         </div>
         <div
           class="main-nav_function"
           :class="{ active: activeNum == 7 }"
           @click="activeNum = 7"
         >
-          承認する
+          承認する <span class="main-nav_count">5</span>
         </div>
         <button
           type="button"
